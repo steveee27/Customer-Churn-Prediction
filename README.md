@@ -12,6 +12,7 @@ You can try the deployed Streamlit app here: [Customer Churn Prediction App](htt
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
 - [Features](#features)
+- [Model Evaluation Results](#model-evaluation-results)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -37,18 +38,18 @@ The **Customer Churn Prediction** project aims to predict whether a customer wil
 
 ```plaintext
 ├── data/
-│   └── Customer-Dataset.csv      # Dataset
+│   └── Customer-Dataset.csv          # Dataset
 ├── src/
-│   ├── Training-Model.ipynb      # Notebook for training models
-│   ├── Training-Model_OOP.py     # OOP-based training script
+│   ├── Training-Model.ipynb          # Notebook for training models
+│   ├── Training-Model_OOP.py         # OOP-based training script
 ├── models/
-│   ├── xgb_classifier_model.pkl  # Trained XGBoost model
-│   ├── gender_encoder.pkl        # Gender encoder
-│   ├── hasCrCard_encoder.pkl     # HasCrCard encoder
-│   ├── isActiveMember_encoder.pkl# IsActiveMember encoder
-├── README.md                     # Project documentation
-└── requirements.txt              # Python dependencies
-└── main.py                       # Streamlit deployment script
+│   ├── xgb_classifier_model.pkl      # Trained XGBoost model
+│   ├── gender_encoder.pkl            # Gender encoder
+│   ├── hasCrCard_encoder.pkl         # HasCrCard encoder
+│   ├── isActiveMember_encoder.pkl    # IsActiveMember encoder
+├── README.md                         # Project documentation
+└── requirements.txt                  # Python dependencies
+└── main.py                           # Streamlit deployment script
 ```
 
 ## Setup Instructions
@@ -113,6 +114,36 @@ Enter customer data in the web interface to get a prediction on whether the cust
 - **Model Training**: Implements two machine learning models (Random Forest and XGBoost) with hyperparameter tuning to optimize performance.
 - **Evaluation**: Provides detailed classification reports and other metrics to evaluate model performance.
 - **Deployment**: Features a user-friendly web application built with Streamlit to predict customer churn interactively.
+
+---
+
+## Model Evaluation Results
+
+The table below compares the performance of the Random Forest and XGBoost models based on their hyperparameters and evaluation metrics:
+
+| **Model**        | **Hyperparameters**                                                                                      | **Precision (Churn)** | **Recall (Churn)** | **F1-Score (Churn)** | **Accuracy** |
+|-------------------|---------------------------------------------------------------------------------------------------------|-----------------------|--------------------|----------------------|--------------|
+| **Random Forest** | `n_estimators=100`, `criterion='gini'`, `max_depth=10`                                                 | 0.77                  | 0.52               | 0.62                 | 86%          |
+| **XGBoost**       | `n_estimators=100`, `learning_rate=0.1`, `max_depth=3`, `subsample=0.5`                                 | 0.76                  | 0.55               | 0.64                 | 86%          |
+
+---
+
+### Insights
+
+1. **XGBoost Model**:
+   - Achieved slightly higher recall (**0.55**) and F1-score (**0.64**) compared to Random Forest.
+   - This makes XGBoost more suitable for scenarios where capturing more true churn cases is critical.
+
+2. **Random Forest Model**:
+   - Has a slightly higher precision (**0.77**) than XGBoost, making it better for reducing false positives in churn prediction.
+
+3. Both models achieved an accuracy of **86%**, indicating comparable overall performance, but their suitability depends on the specific business use case.
+
+---
+
+### Conclusion
+
+Based on the evaluation, **XGBoost** is selected as the final model due to its higher F1-score and recall, which are crucial for minimizing churn cases missed. The trained XGBoost model has been saved as `xgb_classifier_model.pkl` and is deployed for predictions in the Streamlit application.
 
 ---
 
