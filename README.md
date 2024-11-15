@@ -2,6 +2,8 @@
 
 This project predicts customer churn for a bank by analyzing customer data using machine learning techniques. It includes data preprocessing, such as handling missing values and encoding features, and model training with Random Forest and XGBoost to identify patterns associated with churn. The best model is deployed using Streamlit, allowing users to input customer details and receive real-time churn predictions. This solution helps banks proactively address customer retention challenges.
 
+You can try the deployed Streamlit app here: [Customer Churn Prediction App](https://customer-churn-prediction-machine-learning.streamlit.app/)
+
 ## Table of Contents
 
 - [Overview](#overview)
