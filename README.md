@@ -4,6 +4,8 @@ This project predicts customer churn for a bank by analyzing customer data using
 
 You can try the deployed Streamlit app here: [Customer Churn Prediction App](https://customer-churn-prediction-machine-learning.streamlit.app/)
 
+---
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -16,6 +18,8 @@ You can try the deployed Streamlit app here: [Customer Churn Prediction App](htt
 - [Contributing](#contributing)
 - [License](#license)
 
+---
+
 ## Overview
 
 The **Customer Churn Prediction** project aims to predict whether a customer will churn based on historical data. The project includes:
@@ -25,6 +29,8 @@ The **Customer Churn Prediction** project aims to predict whether a customer wil
 - Evaluation of model performance.
 - Deployment of the best-performing model using Streamlit.
 
+---
+
 ## Technologies Used
 
 - **Python 3.10**
@@ -33,6 +39,8 @@ The **Customer Churn Prediction** project aims to predict whether a customer wil
 - **XGBoost** for gradient boosting.
 - **Streamlit** for creating a web-based UI.
 - **Joblib** for model serialization.
+
+---
 
 ## Project Structure
 
@@ -51,6 +59,8 @@ The **Customer Churn Prediction** project aims to predict whether a customer wil
 └── requirements.txt                  # Python dependencies
 └── main.py                           # Streamlit deployment script
 ```
+
+---
 
 ## Setup Instructions
 
