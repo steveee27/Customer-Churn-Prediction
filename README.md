@@ -87,11 +87,7 @@ The **Customer Churn Prediction** project aims to predict whether a customer wil
     ```bash
     pip install -r requirements.txt
     ```
-
-4. Place the dataset (`Customer-Dataset.csv`) in the `data/` directory.
-
-5. Place the pre-trained models (`.pkl` files) in the `models/` directory.
-
+    
 ---
 
 ### Usage
